@@ -6,7 +6,7 @@ import java.awt.*;
 public class Shot {
     private int x, y;//弾の位置
     private static final int SPEED = 10;//弾丸のスピード
-    private static final Point SHOT_STORAGE = new Point(-30, -30);//保管庫
+    private static final Point SHOT_STORAGE = new Point(500, 500);//保管庫
     private int width;
     private int height;
     private Image image;

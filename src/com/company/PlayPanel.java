@@ -1,6 +1,8 @@
 package com.company;
 
 import javax.swing.*;
+import java.applet.Applet;
+import java.applet.AudioClip;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,9 +36,17 @@ public class PlayPanel extends JPanel implements ActionListener, KeyListener {
     private int dieCount = 0;//倒したカウント
     private int damageCount = 100;//ダメージカウント
     private int storageCount = 0;
+    private AudioClip bomb_sound;
+    private AudioClip bomb_sound2;
 
-    public PlayPanel() {
+    private Panel panel;
+    private EndPanel endPanel;
+    private GameOverPanel gameOverPanel;
+
+    public PlayPanel(Panel panel) {
         //SCORE表示Label
+
+        this.panel = panel;//Panelクラスを使えるようにした
 
         setPreferredSize(new Dimension(480, 480));
         setBackground(Color.BLACK);
@@ -63,9 +73,12 @@ public class PlayPanel extends JPanel implements ActionListener, KeyListener {
         //敵を10体生成
         enemys = new Enemy[ENEMY_NUM];
         for (int i = 0; i < ENEMY_NUM; i++) {//敵をランダムに出現させる
-            enemys[i] = new Enemy((int) (Math.random() * 480) + 1, -(int) (Math.random() * 100) + 1, "img/enemy.gif", shot, player, this);
+            enemys[i] = new Enemy((int) (Math.random() * 459) + 1, -(int) (Math.random() * 100) + 1, "img/enemy.gif", shot, player, this);
         }
 
+        //効果音
+        bomb_sound = Applet.newAudioClip(getClass().getResource("sound/bomb.wav"));
+        bomb_sound2 = Applet.newAudioClip(getClass().getResource("sound/bomb2_sound.wav"));
 
         panelTimer = new Timer(16, this);//16ms毎にした
         panelTimer.start();//タイマーをスタートさせる
@@ -109,6 +122,9 @@ public class PlayPanel extends JPanel implements ActionListener, KeyListener {
         for (int i = 0; i < ENEMY_NUM; i++) {
             if (enemys[i].collideWith()) {
                 enemys[i].GoStorage();
+
+                bomb_sound.play();
+
                 dieCount++;
                 break;
             }
@@ -118,6 +134,9 @@ public class PlayPanel extends JPanel implements ActionListener, KeyListener {
         for (int i = 0; i < ENEMY_NUM; i++) {
             if (enemys[i].collideWithPlayer()) {
                 enemys[i].GoStorage();
+                System.out.println("あたったよ");
+                bomb_sound2.play();
+
                 damageCount = damageCount - 10;
                 break;
             }
@@ -133,14 +152,11 @@ public class PlayPanel extends JPanel implements ActionListener, KeyListener {
         }
 
         if (storageCount == 10) {
-            try {//次の敵が出撃するまでのtimeスレッド
-                thread.sleep(1000);
-                for (int i = 0; i < ENEMY_NUM; i++) {//敵をランダムに出現させる
-                    enemys[i] = new Enemy((int) (Math.random() * 480) + 1, -(int) (Math.random() * 100) + 1, "img/enemy.gif", shot, player, this);
-                }
-            } catch (InterruptedException ex) {
-                //なんもしない
+
+            for (int i = 0; i < ENEMY_NUM; i++) {//敵をランダムに出現させる
+                enemys[i] = new Enemy((int) (Math.random() * 459) + 1, -(int) (Math.random() * 100) + 1, "img/enemy.gif", shot, player, this);
             }
+
         }
 
         storageCount = 0;//敵の保管庫カウントをリセットする
@@ -151,10 +167,13 @@ public class PlayPanel extends JPanel implements ActionListener, KeyListener {
         //もしHPが0になったらゲームオーバー
         if (damageCount == 0) {
 
+            gameOverPanel = new GameOverPanel(this);
+            panel.changePanel(gameOverPanel);
         }
-        //もし10体倒せたらゲームクリア
-        if (dieCount == 10) {
-
+        //もし100体倒せたらゲームクリア
+        if (dieCount == 100) {
+            endPanel = new EndPanel(this);
+            panel.changePanel(endPanel);
         }
 
         repaint();//16ms毎に描画しなおし

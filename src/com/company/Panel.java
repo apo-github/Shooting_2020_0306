@@ -11,12 +11,14 @@ public class Panel extends JPanel implements KeyListener {
     private int scene;
     private PlayPanel playPanel;
     private StartPanel startPanel;
+    private InstructionPanel instructionPanel;
     private GameOverPanel gameOverPanel;
     private EndPanel endPanel;
 
 
     private final int NOT_PRESS = 3;
     private final int ENTER = 4;
+    private int enter_keyCount = 0;
 
     private int key = NOT_PRESS;
 
@@ -55,14 +57,20 @@ public class Panel extends JPanel implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         key = e.getKeyCode();
-        switch (key) {
 
-            case KeyEvent.VK_ENTER:
-                key = ENTER;
-                playPanel = new PlayPanel();
-                changePanel(playPanel);
-                break;
+        if (key == KeyEvent.VK_ENTER || enter_keyCount == 0) {
+            key = ENTER;
+            playPanel = new PlayPanel(this);
+            changePanel(playPanel);
+
+            enter_keyCount++;//Enterが一回押されたのでプラスしとく
         }
+        if (key == KeyEvent.VK_ENTER || enter_keyCount == 1) {
+            key = ENTER;
+            instructionPanel = new InstructionPanel();
+            changePanel(instructionPanel);
+        }
+
 
     }
 

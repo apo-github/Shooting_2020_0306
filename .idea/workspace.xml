@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f65b383-e8fb-4379-8f3e-a08d71aede6f" name="Default Changelist" comment="2020_0306&#10;farst" />
+    <list default="true" id="2f65b383-e8fb-4379-8f3e-a08d71aede6f" name="Default Changelist" comment="2020_0306&#10;farst">
+      <change afterPath="$PROJECT_DIR$/src/com/company/InstructionPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/sound/bomb.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/sound/bomb2_sound.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/EndPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/EndPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Frame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/GameOverPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/GameOverPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Panel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Panel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/PlayPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/PlayPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Shot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/Shot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/StartPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shooting_2020_0223/com/company/StartPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/EndPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/EndPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GameOverPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameOverPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/PlayPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PlayPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Shot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/StartPanel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,14 +64,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/company" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fukic\IdeaProjects\Shooting_2020_0223\src\com\company" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\fukic\IdeaProjects\Shooting_2020_0223\src\com\company\sound" />
       <recent name="C:\Users\fukic\IdeaProjects\Shooting_2020_0223\src\com\company\img" />
       <recent name="C:\Users\fukic\IdeaProjects\Shooting_2020_0223\src\com\company" />
       <recent name="C:\Users\fukic\IdeaProjects\Shooting_2020_0223\src\img" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\fukic\IdeaProjects\Shooting_2020_0223\src\com\company" />
     </key>
   </component>
   <component name="RunManager" selected="アプリケーション.Frame">
@@ -114,12 +136,27 @@
       <workItem from="1583230030590" duration="170000" />
       <workItem from="1583379882173" duration="17613000" />
       <workItem from="1583448275307" duration="1662000" />
-      <workItem from="1583465070336" duration="955000" />
+      <workItem from="1583465070336" duration="21818000" />
     </task>
+    <task id="LOCAL-00001" summary="2020_0306&#10;farst">
+      <created>1583483919341</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583483919341</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="2020_0306&#10;farst" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020_0306&#10;farst" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1583392360537">
@@ -127,30 +164,34 @@
     </state>
     <state x="734" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080/-1280.59.1280.984@0.0.1858.1080" timestamp="1582791581906" />
     <state x="734" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583392360537" />
-    <state x="447" y="134" key="CommitChangelistDialog2" timestamp="1583483531720">
+    <state x="447" y="134" key="CommitChangelistDialog2" timestamp="1583484453075">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="447" y="134" key="CommitChangelistDialog2/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583483531720" />
-    <state width="1815" height="196" key="GridCell.Tab.0.bottom" timestamp="1583450432769">
+    <state x="447" y="134" key="CommitChangelistDialog2/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583484453075" />
+    <state x="793" y="433" key="Github.ShareDialog" timestamp="1583484219157">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="793" y="433" key="Github.ShareDialog/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583484219157" />
+    <state width="1815" height="196" key="GridCell.Tab.0.bottom" timestamp="1583506489998">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="196" key="GridCell.Tab.0.bottom/0.0.1858.1080/-1280.59.1280.984@0.0.1858.1080" timestamp="1583151534068" />
-    <state width="1815" height="196" key="GridCell.Tab.0.bottom/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583450432769" />
-    <state width="1815" height="196" key="GridCell.Tab.0.center" timestamp="1583450432769">
+    <state width="1815" height="196" key="GridCell.Tab.0.bottom/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583506489998" />
+    <state width="1815" height="196" key="GridCell.Tab.0.center" timestamp="1583506489998">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="196" key="GridCell.Tab.0.center/0.0.1858.1080/-1280.59.1280.984@0.0.1858.1080" timestamp="1583151534068" />
-    <state width="1815" height="196" key="GridCell.Tab.0.center/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583450432769" />
-    <state width="1815" height="196" key="GridCell.Tab.0.left" timestamp="1583450432769">
+    <state width="1815" height="196" key="GridCell.Tab.0.center/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583506489998" />
+    <state width="1815" height="196" key="GridCell.Tab.0.left" timestamp="1583506489998">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="196" key="GridCell.Tab.0.left/0.0.1858.1080/-1280.59.1280.984@0.0.1858.1080" timestamp="1583151534068" />
-    <state width="1815" height="196" key="GridCell.Tab.0.left/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583450432769" />
-    <state width="1815" height="196" key="GridCell.Tab.0.right" timestamp="1583450432769">
+    <state width="1815" height="196" key="GridCell.Tab.0.left/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583506489998" />
+    <state width="1815" height="196" key="GridCell.Tab.0.right" timestamp="1583506489998">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="196" key="GridCell.Tab.0.right/0.0.1858.1080/-1280.59.1280.984@0.0.1858.1080" timestamp="1583151534068" />
-    <state width="1815" height="196" key="GridCell.Tab.0.right/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583450432769" />
+    <state width="1815" height="196" key="GridCell.Tab.0.right/0.0.1858.1080/-1280.65.1280.984@0.0.1858.1080" timestamp="1583506489998" />
     <state width="1815" height="364" key="GridCell.Tab.1.bottom" timestamp="1583404311787">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

@@ -1,18 +1,20 @@
 package com.company;
 
 import javax.swing.*;
+import java.applet.AudioClip;
 import java.awt.*;
 
 public class Enemy {
     private int x, y;
     private int width;
     private int height;
-    private static final int SPEED = 1;
-    private static final Point ENEMY_STORAGE = new Point(-20, -20);
+    private double speed = 1;
+    private static final Point ENEMY_STORAGE = new Point(-100, -100);
     private Image image;
     private Shot shot;
     private Player player;
 
+    public AudioClip bgm;
     private PlayPanel panel;
 
 
@@ -39,8 +41,11 @@ public class Enemy {
     }
 
     public void move() {
+        if (panel.getDieCount() == (int) (Math.random() * 200) + 1) {
+            speed = speed + 8;
+        }
 
-        this.y += SPEED;
+        this.y += speed;
 
         if (y > 480) {//画面外にでたらオブジェクトを保管庫へ
             GoStorage();

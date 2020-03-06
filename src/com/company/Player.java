@@ -32,6 +32,13 @@ public class Player {
     }
 
     public void move(int dir) {
+        //20はimgの大きさ(px)
+        if (x + 20 >= panel.getWidth()) {
+            x = panel.getWidth() - 20;
+        }
+        if (x <= 0) {
+            x = 0;
+        }
         switch (dir) {
             case 0:
                 this.x = x - SPEED;
